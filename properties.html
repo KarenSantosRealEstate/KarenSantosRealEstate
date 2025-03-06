@@ -33,29 +33,30 @@
     </div>
   </div>
 
-  <script>
-    fetch('path-to-properties-data.json')
-      .then(response => response.json())
-      .then(properties => {
-        const propertyList = document.getElementById('property-list');
-        properties.forEach(property => {
-          const propertyCard = document.createElement('div');
-          propertyCard.classList.add('col');
-          propertyCard.innerHTML = `
-            <div class="card property-card">
-              <img src="${property.image}" class="card-img-top" alt="${property.title}">
-              <div class="card-body">
-                <h5 class="card-title">${property.title}</h5>
-                <p class="property-price">P${property.price}</p>
-                <a href="${property.link}" class="btn btn-primary">View Details</a>
-              </div>
+<script>
+  fetch('path-to-properties-data.json')
+    .then(response => response.json())
+    .then(properties => {
+      const propertyList = document.getElementById('property-list');
+      properties.forEach(property => {
+        const propertyCard = document.createElement('div');
+        propertyCard.classList.add('col');
+        propertyCard.innerHTML = `
+          <div class="card property-card">
+            <img src="${property.image}" class="card-img-top" alt="${property.title}">
+            <div class="card-body">
+              <h5 class="card-title">${property.title}</h5>
+              <p class="property-price">P${property.price}</p>
+              <a href="${property.link}" class="btn btn-primary">View Details</a>
             </div>
-          `;
-          propertyList.appendChild(propertyCard);
-        });
-      })
-      .catch(err => console.error('Error loading properties:', err));
-  </script>
+          </div>
+        `;
+        propertyList.appendChild(propertyCard);
+      });
+    })
+    .catch(err => console.error('Error loading properties:', err));
+</script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
