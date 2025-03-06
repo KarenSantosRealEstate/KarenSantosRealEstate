@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "properties"
+    label: "Properties"
+    folder: "content/properties"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Property Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Property Link", name: "link", widget: "string" }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karen Santos Real Estate</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bg {
+        background-image: url('bg.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .label {
+        margin-top: -100px;
+    }
+  </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="container text-white d-flex align-items-center justify-content-start" style="height: 100vh;">
+            <div class="label d-flex flex-column">
+                <h2>Karen Santos</h2>
+                <h1>Real Estate</h1>
+                <button onclick="proceedBtn()" class="btn btn-primary mt-3 w-25">Proceed</button>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function proceedBtn() {
+        window.location.href = 'properties.html';
+    }
+</script>
+</body>
+</html>
